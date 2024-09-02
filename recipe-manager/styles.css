@@ -1,0 +1,264 @@
+/* Base styles */
+body {
+    font-family: 'Caveat', cursive; /* Handwritten, artsy font */
+    background-color: #312727; /* Slightly darker, warm background */
+    color: #352713; /* Darker text color for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom right, #d9bfbf, #b3a396); /* Soft gradient background */
+    background-attachment: fixed;
+}
+
+/* Container styles */
+.container {
+    width: 90%;
+    max-width: 900px;
+    background-color: #d1c1b0b9; /* Softer, warm background */
+    padding: 50px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden; /* Ensure flower borders don't overflow */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Soft container shadow */
+    border: 2px solid #c0b1ae; /* Subtle border to complement floral design */
+}
+
+/* Flower border styles */
+.flower-border {
+    position: absolute;
+    background: #b31515; /* Soft floral color */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Edge flower borders */
+.flower-border.top-edge {
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: radial-gradient(circle, #f4a261 50%, transparent 70%);
+}
+
+.flower-border.right-edge {
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: radial-gradient(circle, #f4a261 50%, transparent 70%);
+}
+
+.flower-border.bottom-edge {
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: radial-gradient(circle, #f4a261 50%, transparent 70%);
+}
+
+.flower-border.left-edge {
+    left: -20px;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: radial-gradient(circle, #f4a261 50%, transparent 70%);
+}
+
+/* Corner flower borders */
+.flower-border.top-left {
+    top: -30px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #f4a261 50%, transparent 70%);
+}
+
+.flower-border.top-right {
+    top: -30px;
+    right: -30px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #f4a261 50%, transparent 70%);
+}
+
+.flower-border.bottom-left {
+    bottom: -30px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #f4a261 50%, transparent 70%);
+}
+
+.flower-border.bottom-right {
+    bottom: -30px;
+    right: -30px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #f4a261 50%, transparent 70%);
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #7d5a50; /* Richer floral accent color */
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #c7a599;
+    letter-spacing: 2px; /* Artsy letter spacing */
+    animation: colorChange 10s infinite alternate; /* Gentle color change animation */
+    z-index: 1;
+}
+
+/* Button styles */
+.btn {
+    background-color: #7d5a50; /* Soft, deep floral button color */
+    color: #ffffff;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 15px 10px;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(125, 90, 80, 0.3);
+    animation: buttonFloat 6s infinite alternate; /* Floating animation for buttons */
+}
+
+.btn:hover {
+    background-color: #5f4236; /* Deeper accent on hover */
+    box-shadow: 0 5px 25px rgba(95, 66, 54, 0.5); /* Glow effect */
+    transform: translateY(-3px);
+}
+
+/* Form styles */
+.form {
+    margin: 30px 0;
+    padding: 30px;
+    background-color: #ede0d4; /* Soft, warm form background */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease forwards; /* Smooth fade-in */
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid #b08f7a; /* Soft border */
+    border-radius: 10px;
+    background-color: #ffffff; /* Clean input background */
+    color: #2f2d2a;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 10px rgba(176, 143, 122, 0.1);
+}
+
+.form input:focus, .form textarea:focus {
+    border-color: #7d5a50;
+    box-shadow: 0 5px 15px rgba(125, 90, 80, 0.3);
+    outline: none;
+}
+
+/* Recipes list styles */
+.recipes-list {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    animation: listSlideIn 2s ease forwards; /* Slide-in animation */
+}
+
+/* Recipe card styles */
+.recipe-card {
+    background-color: #fff5eb;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #fdfcfc;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 0 0 20px #d1b4a1; /* Softer shadow */
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: cardAppear 6s infinite alternate; /* Gentle appearing animation */
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px) scale(1.03); /* Slight lift and scale */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 40px #7d5a50;
+}
+
+/* Recipe button styles */
+.recipe-card .btn {
+    background-color: #7d5a50;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(125, 90, 80, 0.3);
+}
+
+.recipe-card .btn.edit {
+    background-color: #a78f7d;
+    right: 110px;
+    box-shadow: 0 5px 15px rgba(167, 143, 122, 0.3);
+}
+
+.recipe-card .btn:hover {
+    background-color: #5f4236;
+    color: #ffffff;
+    box-shadow: 0 5px 25px rgba(95, 66, 54, 0.5);
+}
+
+.recipe-card .btn.edit:hover {
+    background-color: #7d5a50;
+    color: #ffffff;
+    box-shadow: 0 5px 25px rgba(125, 90, 80, 0.5);
+}
+
+/* Media queries for responsive design */
+@media (min-width: 600px) {
+    .recipes-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .recipes-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Keyframes for animations */
+@keyframes gentleSwing {
+    0% { transform: rotate(-1deg); }
+    100% { transform: rotate(1deg); }
+}
+
+@keyframes colorChange {
+    0% { color: #7d5a50; }
+    100% { color: #5f4236; }
+}
+
+@keyframes buttonFloat {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes listSlideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes cardAppear {
+    0% { transform: scale(0.98); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
